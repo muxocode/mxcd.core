@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/core/v15
+/src/bin/Debug/netstandard2.0
+/src/obj
+/test/core.test/bin/Debug/netcoreapp2.2
+/test/core.test/obj
