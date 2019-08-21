@@ -8,5 +8,6 @@ namespace mxcd.core.entities
     {
         void Insert();
         void Delete();
+        void Update();
     }
 }
