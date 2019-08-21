@@ -21,5 +21,10 @@ namespace core.test.clases
         {
             throw new NotImplementedException();
         }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
