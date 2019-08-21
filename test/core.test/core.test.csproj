@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\mxcd.core.main.csproj" />
+    <ProjectReference Include="..\..\src\mxcd.core.csproj" />
   </ItemGroup>
 
 </Project>
