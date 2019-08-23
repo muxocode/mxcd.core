@@ -16,6 +16,6 @@ namespace mxcd.core.services
         Task Delete(long key);
         Task<T> Insert(T obj);
         Task<T> Update(T obj);
-        Task<T> Patch<P>(P obj);
+        Task<T> Patch<P>(long key, P obj);
     }
 }
