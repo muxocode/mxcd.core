@@ -2,20 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.3.4</Version>
+    <Version>1.3.5</Version>
     <PackageId>mxcd.core</PackageId>
     <Authors>https://muxocode.com</Authors>
     <Product>mxcd.core</Product>
     <Description>Basic interfaces</Description>
-    <PackageProjectUrl>https://github.com/muxocode/mxcd.core</PackageProjectUrl>
+    <PackageProjectUrl></PackageProjectUrl>
     <PackageIconUrl>https://muxocode.com/icon.png</PackageIconUrl>
     <Company>muxocode</Company>
     <PackageTags>muxocode mxcd core interfaces</PackageTags>
-    <PackageLicenseUrl>licence.txt</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Copyright></Copyright>
-    <RepositoryUrl></RepositoryUrl>
-    <FileVersion>1.3.4.0</FileVersion>
+    <RepositoryUrl>https://github.com/muxocode/mxcd.core</RepositoryUrl>
+    <FileVersion>1.3.5.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
