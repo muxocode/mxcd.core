@@ -7,3 +7,5 @@
 /src/obj
 /test/core.test/bin/Debug/netcoreapp2.2
 /test/core.test/obj
+/src/bin
+/.vs/core/DesignTimeBuild

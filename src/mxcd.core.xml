@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>mxcd.core</name>
+    </assembly>
+    <members>
+        <member name="T:mxcd.core.actions.IDeleteAction`1">
+            <summary>
+            Action to execute before delete an entity
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:mxcd.core.actions.IDeleteAction`1.DoBeforeDelete(`0)">
+            <summary>
+            Action to execute
+            </summary>
+            <param name="obj">entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.actions.IGetAction`1">
+            <summary>
+            Action to execute after get an entity
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:mxcd.core.actions.IGetAction`1.DoAfterGet(`0)">
+            <summary>
+            Action to execute
+            </summary>
+            <param name="obj">entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.actions.IInsertAction`1">
+            <summary>
+            Action to execute after insert an entity
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:mxcd.core.actions.IInsertAction`1.DoBeforeInsert(`0)">
+            <summary>
+            Action to execute before an insert
+            </summary>
+            <param name="obj">entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.actions.IUpdateAction`1">
+            <summary>
+            Action to execute before update an entity
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:mxcd.core.actions.IUpdateAction`1.DoBeforeUpdate(`0)">
+            <summary>
+            Action to execute
+            </summary>
+            <param name="obj">entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.entities.IEntity">
+            <summary>
+            Entity
+            </summary>
+        </member>
+        <member name="P:mxcd.core.entities.IEntity.Id">
+            <summary>
+            Unique field of entity
+            </summary>
+        </member>
+        <member name="T:mxcd.core.rules.implementations.RuleProcessor`1">
+            <summary>
+            Rule processor
+            </summary>
+            <typeparam name="T">Type</typeparam>
+        </member>
+        <member name="P:mxcd.core.rules.implementations.RuleProcessor`1.Rules">
+            <summary>
+            Object that checks the rules of T entity
+            </summary>
+        </member>
+        <member name="M:mxcd.core.rules.implementations.RuleProcessor`1.#ctor(System.Collections.Generic.IEnumerable{mxcd.core.rules.IRule{`0}})">
+            <summary>
+            Create a RuleProcessor
+            </summary>
+            <param name="rules">Rules to check</param>
+        </member>
+        <member name="M:mxcd.core.rules.implementations.RuleProcessor`1.CheckRules(`0)">
+            <summary>
+            Check rules
+            </summary>
+            <param name="entity">entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.rules.IRule`1">
+            <summary>
+            Rule
+            </summary>
+            <typeparam name="T">Type</typeparam>
+        </member>
+        <member name="M:mxcd.core.rules.IRule`1.Check(`0)">
+            <summary>
+            Check the rule
+            </summary>
+            <param name="obj">entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.rules.IRuleProcessor`1">
+            <summary>
+            Rule processor
+            </summary>
+            <typeparam name="T">Type</typeparam>
+        </member>
+        <member name="P:mxcd.core.rules.IRuleProcessor`1.Rules">
+            <summary>
+            Rules to check
+            </summary>
+        </member>
+        <member name="M:mxcd.core.rules.IRuleProcessor`1.CheckRules(`0)">
+            <summary>
+            Check rules
+            </summary>
+            <param name="entity">entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.repository.IRepository`1">
+            <summary>
+            Repository pattern
+            </summary>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Get a set os entities
+            </summary>
+            <param name="expression">Filter</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Get(System.Int64)">
+            <summary>
+            Get a specific entity
+            </summary>
+            <param name="key">Unique key</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Insert(`0)">
+            <summary>
+            Insert a entity
+            </summary>
+            <param name="obj">entity</param>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Update(System.Int64,`0)">
+            <summary>
+            Update an entity
+            </summary>
+            <param name="key">unique key</param>
+            <param name="obj">entity</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Delete(System.Int64)">
+            <summary>
+            Remove an entity
+            </summary>
+            <param name="key">unique key</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Patch``1(System.Int64,``0)">
+            <summary>
+            Update an entity partialy
+            </summary>
+            <param name="key">unique key</param>
+            <param name="obj">entity</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.services.ICreator`2">
+            <summary>
+            Creates an entity of <typeparamref name="TOut"/> from <typeparamref name="TIn"/> value
+            </summary>
+            <typeparam name="TOut">out entity</typeparam>
+            <typeparam name="TIn">input entity</typeparam>
+        </member>
+        <member name="M:mxcd.core.services.ICreator`2.Create(`1)">
+            <summary>
+            Create an <typeparamref name="TOut"/> entity
+            </summary>
+            <param name="data"><typeparamref name="TIn"/> value</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.services.ICreator`1">
+            <summary>
+            Creates a <typeparamref name="TOut"/> entity
+            </summary>
+            <typeparam name="TOut"></typeparam>
+        </member>
+        <member name="M:mxcd.core.services.ICreator`1.Create">
+            <summary>
+            Creates a <typeparamref name="TOut"/> entity
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:mxcd.core.services.IService`1.GetActions">
+            <summary>
+            Get actions
+            </summary>
+        </member>
+        <member name="P:mxcd.core.services.IService`1.DeleteActions">
+            <summary>
+            Delete actions
+            </summary>
+        </member>
+        <member name="P:mxcd.core.services.IService`1.UpdateActions">
+            <summary>
+            Update actions
+            </summary>
+        </member>
+        <member name="P:mxcd.core.services.IService`1.InsertActions">
+            <summary>
+            Inser actions
+            </summary>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IUnitOfWork.SaveChanges">
+            <summary>
+            Save pending changes
+            </summary>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IUnitOfWork.DiscardChanges">
+            <summary>
+            Discard pending changes
+            </summary>
+        </member>
+    </members>
+</doc>
