@@ -38,6 +38,7 @@ steps:
     command: 'pack'
     packagesToPack: '**/*core.csproj'
     versioningScheme: 'off'
+    arguments: '--configuration $(buildConfiguration)'
 
 - task: NuGetCommand@2
   inputs:
