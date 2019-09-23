@@ -9,3 +9,5 @@
 /test/core.test/obj
 /src/bin
 /.vs/core/DesignTimeBuild
+/test/core.test/bin/Release/netcoreapp2.2
+/.vs/core/v16
