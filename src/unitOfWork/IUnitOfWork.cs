@@ -4,6 +4,9 @@ using System.Text;
 
 namespace mxcd.core.unitOfWork
 {
+    /// <summary>
+    /// Unit of work
+    /// </summary>
     public interface IUnitOfWork : IDisposable
     {
         /// <summary>

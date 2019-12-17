@@ -10,7 +10,7 @@ namespace core.test.clases
     {
         public async Task<bool> Check(TestUser obj)
         {
-            return true;
+            return await Task.Run(()=> true);
         }
     }
 
@@ -18,7 +18,7 @@ namespace core.test.clases
     {
         public async Task<bool> Check(TestUser obj)
         {
-            return false;
+            return await Task.Run(() => false);
         }
     }
 }

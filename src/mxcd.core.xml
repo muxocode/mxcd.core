@@ -66,6 +66,17 @@
             Unique field of entity
             </summary>
         </member>
+        <member name="T:mxcd.core.entities.IEntity`1">
+            <summary>
+            Entity
+            </summary>
+            <typeparam name="T">Key type</typeparam>
+        </member>
+        <member name="P:mxcd.core.entities.IEntity`1.Id">
+            <summary>
+            Unique field of entity
+            </summary>
+        </member>
         <member name="T:mxcd.core.rules.implementations.RuleProcessor`1">
             <summary>
             Rule processor
@@ -133,40 +144,42 @@
             <param name="expression">Filter</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Get(System.Int64)">
-            <summary>
-            Get a specific entity
-            </summary>
-            <param name="key">Unique key</param>
-            <returns></returns>
-        </member>
         <member name="M:mxcd.core.repository.IRepository`1.Insert(`0)">
             <summary>
             Insert a entity
             </summary>
             <param name="obj">entity</param>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Update(System.Int64,`0)">
+        <member name="M:mxcd.core.repository.IRepository`1.Update(`0)">
             <summary>
             Update an entity
             </summary>
-            <param name="key">unique key</param>
             <param name="obj">entity</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Delete(System.Int64)">
+        <member name="M:mxcd.core.repository.IRepository`1.Delete(`0)">
             <summary>
             Remove an entity
             </summary>
-            <param name="key">unique key</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Patch``1(System.Int64,``0)">
+        <member name="T:mxcd.core.repository.IRepository`2">
             <summary>
-            Update an entity partialy
+            Repository pattern
             </summary>
-            <param name="key">unique key</param>
-            <param name="obj">entity</param>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`2.Get(`1)">
+            <summary>
+            Get a specific entity
+            </summary>
+            <param name="key">Unique key</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`2.Delete(`1)">
+            <summary>
+            Remove an entity
+            </summary>
+            <param name="key">Unique key</param>
             <returns></returns>
         </member>
         <member name="T:mxcd.core.services.ICreator`2">
@@ -195,6 +208,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:mxcd.core.services.IService`1">
+            <summary>
+            Repository with actions asociated
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
         <member name="P:mxcd.core.services.IService`1.GetActions">
             <summary>
             Get actions
@@ -213,6 +232,11 @@
         <member name="P:mxcd.core.services.IService`1.InsertActions">
             <summary>
             Inser actions
+            </summary>
+        </member>
+        <member name="T:mxcd.core.unitOfWork.IUnitOfWork">
+            <summary>
+            Unit of work
             </summary>
         </member>
         <member name="M:mxcd.core.unitOfWork.IUnitOfWork.SaveChanges">

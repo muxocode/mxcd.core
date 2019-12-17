@@ -19,12 +19,6 @@ namespace mxcd.core.repository
         /// <returns></returns>
         Task<IEnumerable<T>> Get(Expression<Func<T, bool>> expression = null);
         /// <summary>
-        /// Get a specific entity
-        /// </summary>
-        /// <param name="key">Unique key</param>
-        /// <returns></returns>
-        Task<T> Get(long key);
-        /// <summary>
         /// Insert a entity
         /// </summary>
         /// <param name="obj">entity</param>
@@ -32,22 +26,31 @@ namespace mxcd.core.repository
         /// <summary>
         /// Update an entity
         /// </summary>
-        /// <param name="key">unique key</param>
         /// <param name="obj">entity</param>
         /// <returns></returns>
-        Task<T> Update(long key, T obj);
+        Task<T> Update(T obj);
         /// <summary>
         /// Remove an entity
         /// </summary>
-        /// <param name="key">unique key</param>
         /// <returns></returns>
-        Task Delete(long key);
+        Task Delete(T obj);
+    }
+    /// <summary>
+    /// Repository pattern
+    /// </summary>
+    public interface IRepository<T, TKey>: IRepository<T> where T : IEntity<TKey>
+    {
         /// <summary>
-        /// Update an entity partialy
+        /// Get a specific entity
         /// </summary>
-        /// <param name="key">unique key</param>
-        /// <param name="obj">entity</param>
+        /// <param name="key">Unique key</param>
         /// <returns></returns>
-        Task<T> Patch<P>(long key, P obj);
+        Task<T> Get(TKey key);
+        /// <summary>
+        /// Remove an entity
+        /// </summary>
+        /// <param name="key">Unique key</param>
+        /// <returns></returns>
+        Task Delete(TKey key);
     }
 }
