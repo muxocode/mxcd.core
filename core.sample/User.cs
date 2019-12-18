@@ -10,12 +10,19 @@ namespace core.sample
 {
     public class User : IEntity
     {
-        public object Id { get => new Guid(); set => throw new NotImplementedException(); }
+        public long Id { get; }
+
+        object IEntity.Id => this.Id;
     }
 
     public class UserRepository : IRepository<User>
     {
         public Task Delete(User obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Delete(Expression<Func<User, bool>> expression)
         {
             throw new NotImplementedException();
         }
@@ -35,12 +42,17 @@ namespace core.sample
             throw new NotImplementedException();
         }
 
-        public Task<User> Insert(User obj)
+        public Task Insert(User obj)
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> Update(User obj)
+        public Task Update(User obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Update<TUpdate>(Expression<Func<User, bool>> expression, TUpdate objToUpdate)
         {
             throw new NotImplementedException();
         }
@@ -52,6 +64,7 @@ namespace core.sample
         {
             var repo = new UserRepository();
             var user= repo.Get(new Guid());
+            repo.Update(x => x.Id > 3, new { name = "Miguel" });
         }
     }
 }

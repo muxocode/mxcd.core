@@ -34,6 +34,14 @@ namespace mxcd.core.repository
         /// <returns></returns>
         Task Update(T obj);
         /// <summary>
+        /// Update by expression
+        /// </summary>
+        /// <typeparam name="TUpdate">Object type</typeparam>
+        /// <param name="expression">expression</param>
+        /// <param name="objToUpdate">data to update</param>
+        /// <returns></returns>
+        Task Update<TUpdate>(Expression<Func<T, bool>> expression, TUpdate objToUpdate);
+        /// <summary>
         /// Remove an entity
         /// </summary>
         /// <returns></returns>
