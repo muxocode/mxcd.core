@@ -4,57 +4,58 @@
         <name>mxcd.core</name>
     </assembly>
     <members>
+        <member name="T:mxcd.core.actions.ActionTime">
+            <summary>
+            Moment of the action
+            </summary>
+        </member>
+        <member name="F:mxcd.core.actions.ActionTime.before">
+            <summary>
+            Before action
+            </summary>
+        </member>
+        <member name="F:mxcd.core.actions.ActionTime.after">
+            <summary>
+            After action
+            </summary>
+        </member>
+        <member name="T:mxcd.core.actions.IAction`1">
+            <summary>
+            Action interface
+            </summary>
+            <typeparam name="T">Type</typeparam>
+        </member>
+        <member name="M:mxcd.core.actions.IAction`1.Do(`0,mxcd.core.actions.ActionTime)">
+            <summary>
+            Run operation
+            </summary>
+            <param name="obj">entity</param>
+            <param name="actionTime">Action moment</param>
+            <returns></returns>
+        </member>
         <member name="T:mxcd.core.actions.IDeleteAction`1">
             <summary>
             Action to execute before delete an entity
             </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:mxcd.core.actions.IDeleteAction`1.DoBeforeDelete(`0)">
-            <summary>
-            Action to execute
-            </summary>
-            <param name="obj">entity</param>
-            <returns></returns>
+            <typeparam name="T">Type</typeparam>
         </member>
         <member name="T:mxcd.core.actions.IGetAction`1">
             <summary>
             Action to execute after get an entity
             </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:mxcd.core.actions.IGetAction`1.DoAfterGet(`0)">
-            <summary>
-            Action to execute
-            </summary>
-            <param name="obj">entity</param>
-            <returns></returns>
+            <typeparam name="T">Type</typeparam>
         </member>
         <member name="T:mxcd.core.actions.IInsertAction`1">
             <summary>
             Action to execute after insert an entity
             </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:mxcd.core.actions.IInsertAction`1.DoBeforeInsert(`0)">
-            <summary>
-            Action to execute before an insert
-            </summary>
-            <param name="obj">entity</param>
-            <returns></returns>
+            <typeparam name="T">Type</typeparam>
         </member>
         <member name="T:mxcd.core.actions.IUpdateAction`1">
             <summary>
             Action to execute before update an entity
             </summary>
-            <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:mxcd.core.actions.IUpdateAction`1.DoBeforeUpdate(`0)">
-            <summary>
-            Action to execute
-            </summary>
-            <param name="obj">entity</param>
-            <returns></returns>
+            <typeparam name="T">Type</typeparam>
         </member>
         <member name="T:mxcd.core.entities.IEntity">
             <summary>
@@ -62,17 +63,6 @@
             </summary>
         </member>
         <member name="P:mxcd.core.entities.IEntity.Id">
-            <summary>
-            Unique field of entity
-            </summary>
-        </member>
-        <member name="T:mxcd.core.entities.IEntity`1">
-            <summary>
-            Entity
-            </summary>
-            <typeparam name="T">Key type</typeparam>
-        </member>
-        <member name="P:mxcd.core.entities.IEntity`1.Id">
             <summary>
             Unique field of entity
             </summary>
@@ -163,19 +153,14 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.repository.IRepository`2">
-            <summary>
-            Repository pattern
-            </summary>
-        </member>
-        <member name="M:mxcd.core.repository.IRepository`2.Get(`1)">
+        <member name="M:mxcd.core.repository.IRepository`1.Get``1(``0)">
             <summary>
             Get a specific entity
             </summary>
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`2.Delete(`1)">
+        <member name="M:mxcd.core.repository.IRepository`1.Delete``1(``0)">
             <summary>
             Remove an entity
             </summary>

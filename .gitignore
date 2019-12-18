@@ -11,3 +11,5 @@
 /.vs/core/DesignTimeBuild
 /test/core.test/bin/Release/netcoreapp2.2
 /.vs/core/v16
+/core.sample/obj
+/.vs/mxcd.core/v16

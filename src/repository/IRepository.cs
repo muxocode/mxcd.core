@@ -34,23 +34,17 @@ namespace mxcd.core.repository
         /// </summary>
         /// <returns></returns>
         Task Delete(T obj);
-    }
-    /// <summary>
-    /// Repository pattern
-    /// </summary>
-    public interface IRepository<T, TKey>: IRepository<T> where T : IEntity<TKey>
-    {
         /// <summary>
         /// Get a specific entity
         /// </summary>
         /// <param name="key">Unique key</param>
         /// <returns></returns>
-        Task<T> Get(TKey key);
+        Task<T> Get<TKey>(TKey key);
         /// <summary>
         /// Remove an entity
         /// </summary>
         /// <param name="key">Unique key</param>
         /// <returns></returns>
-        Task Delete(TKey key);
+        Task Delete<TKey>(TKey key);
     }
 }

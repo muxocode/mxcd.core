@@ -12,18 +12,6 @@ namespace mxcd.core.entities
         /// <summary>
         /// Unique field of entity
         /// </summary>
-        object Id { get; set; }
-    }
-
-    /// <summary>
-    /// Entity
-    /// </summary>
-    /// <typeparam name="T">Key type</typeparam>
-    public interface IEntity<T>:IEntity
-    {
-        /// <summary>
-        /// Unique field of entity
-        /// </summary>
-        new T Id { get; set; }
+        object Id { get; }
     }
 }
