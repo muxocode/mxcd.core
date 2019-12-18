@@ -19,27 +19,31 @@ namespace mxcd.core.repository
         /// <returns></returns>
         Task<IEnumerable<T>> Get(Expression<Func<T, bool>> expression = null);
         /// <summary>
+        /// Get a specific entity
+        /// </summary>
+        /// <param name="key">Unique key</param>
+        /// <returns></returns>
+        Task<T> Get<TKey>(TKey key);
+        /// <summary>
         /// Insert a entity
         /// </summary>
-        /// <param name="obj">entity</param>
-        Task<T> Insert(T obj);
+        Task Insert(T obj);
         /// <summary>
         /// Update an entity
         /// </summary>
-        /// <param name="obj">entity</param>
         /// <returns></returns>
-        Task<T> Update(T obj);
+        Task Update(T obj);
         /// <summary>
         /// Remove an entity
         /// </summary>
         /// <returns></returns>
         Task Delete(T obj);
         /// <summary>
-        /// Get a specific entity
+        /// Remove entities
         /// </summary>
-        /// <param name="key">Unique key</param>
+        /// <param name="expression">Expresion</param>
         /// <returns></returns>
-        Task<T> Get<TKey>(TKey key);
+        Task Delete(Expression<Func<T, bool>> expression);
         /// <summary>
         /// Remove an entity
         /// </summary>
