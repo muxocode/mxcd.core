@@ -15,7 +15,7 @@ namespace core.sample
         object IEntity.Id => this.Id;
     }
 
-    public class UserRepository : IRepository<User>
+    public class UserRepository : IEntityRepository<User>
     {
         public Task Delete(User obj)
         {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace mxcd.core.actions
+﻿namespace mxcd.core.actions
 {
     /// <summary>
     /// Action to execute after get an entity

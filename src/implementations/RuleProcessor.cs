@@ -1,5 +1,4 @@
-﻿using mxcd.core.rules;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace mxcd.core.rules.implementations

@@ -1,9 +1,7 @@
 ﻿using mxcd.core.actions;
 using mxcd.core.entities;
 using mxcd.core.repository;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace mxcd.core.services
 {
@@ -11,7 +9,7 @@ namespace mxcd.core.services
     /// Repository with actions asociated
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IService<T>: IRepository<T> where T : IEntity
+    public interface IService<T>: IEntityRepository<T> where T : IEntity
     {
         /// <summary>
         /// Get actions

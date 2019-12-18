@@ -122,50 +122,69 @@
             <param name="entity">entity</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.repository.IRepository`1">
+        <member name="T:mxcd.core.repository.IEntityRepository`1">
             <summary>
-            Repository pattern
+            Repository pattern for entities
             </summary>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
-            <summary>
-            Get a set os entities
-            </summary>
-            <param name="expression">Filter</param>
-            <returns></returns>
-        </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Insert(`0)">
-            <summary>
-            Insert a entity
-            </summary>
-            <param name="obj">entity</param>
-        </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Update(`0)">
-            <summary>
-            Update an entity
-            </summary>
-            <param name="obj">entity</param>
-            <returns></returns>
-        </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Delete(`0)">
-            <summary>
-            Remove an entity
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Get``1(``0)">
+        <member name="M:mxcd.core.repository.IEntityRepository`1.Get``1(``0)">
             <summary>
             Get a specific entity
             </summary>
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Delete``1(``0)">
+        <member name="M:mxcd.core.repository.IEntityRepository`1.Update(`0)">
+            <summary>
+            Update an entity
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.repository.IEntityRepository`1.Update``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},``0)">
+            <summary>
+            Update by expression
+            </summary>
+            <typeparam name="TUpdate">Object type</typeparam>
+            <param name="expression">expression</param>
+            <param name="objToUpdate">data to update</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.repository.IEntityRepository`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Remove entities
+            </summary>
+            <param name="expression">Expresion</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.repository.IEntityRepository`1.Delete``1(``0)">
             <summary>
             Remove an entity
             </summary>
             <param name="key">Unique key</param>
             <returns></returns>
+        </member>
+        <member name="T:mxcd.core.repository.IRepository`1">
+            <summary>
+            Repository pattern
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Add(`0)">
+            <summary>
+            Add an item
+            </summary>
+            <param name="item">item to add</param>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Gets elements from repository
+            </summary>
+            <param name="expression">Filter</param>
+        </member>
+        <member name="M:mxcd.core.repository.IRepository`1.Remove(`0[])">
+            <summary>
+            Removes items from repository
+            </summary>
         </member>
         <member name="T:mxcd.core.services.ICreator`2">
             <summary>
@@ -219,6 +238,66 @@
             Inser actions
             </summary>
         </member>
+        <member name="T:mxcd.core.unitOfWork.IPending">
+            <summary>
+            Pending entities
+            </summary>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.Add``1(``0)">
+            <summary>
+            Add a new entity
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="obj">Entity</param>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.Update``1(``0)">
+            <summary>
+            Updates an entiry
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="obj">Entity</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.Remove``1(``0)">
+            <summary>
+            Removes an object
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="obj">Entity</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.Add(System.Action)">
+            <summary>
+            Add a new action
+            </summary>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.Remove(System.Action)">
+            <summary>
+            Removes an action
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.GetEntities``1(mxcd.core.unitOfWork.enums.TypePending[])">
+            <summary>
+            Get pending objects
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="types">Types to filter</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.GetEntities(mxcd.core.unitOfWork.enums.TypePending[])">
+            <summary>
+            Get pending objects
+            </summary>
+            <param name="types">Types to filter</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.GetActions">
+            <summary>
+            Get pending actions
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:mxcd.core.unitOfWork.IUnitOfWork">
             <summary>
             Unit of work
@@ -232,6 +311,26 @@
         <member name="M:mxcd.core.unitOfWork.IUnitOfWork.DiscardChanges">
             <summary>
             Discard pending changes
+            </summary>
+        </member>
+        <member name="T:mxcd.core.unitOfWork.enums.TypePending">
+            <summary>
+            Action types, that will execute in order
+            </summary>
+        </member>
+        <member name="F:mxcd.core.unitOfWork.enums.TypePending.update">
+            <summary>
+            Update an item
+            </summary>
+        </member>
+        <member name="F:mxcd.core.unitOfWork.enums.TypePending.remove">
+            <summary>
+            Removes an item
+            </summary>
+        </member>
+        <member name="F:mxcd.core.unitOfWork.enums.TypePending.add">
+            <summary>
+            Add new item
             </summary>
         </member>
     </members>

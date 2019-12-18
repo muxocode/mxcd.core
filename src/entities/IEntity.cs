@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace mxcd.core.entities
+﻿namespace mxcd.core.entities
 {
     /// <summary>
     /// Entity
