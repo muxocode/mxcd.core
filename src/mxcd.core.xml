@@ -57,6 +57,68 @@
             </summary>
             <typeparam name="T">Type</typeparam>
         </member>
+        <member name="T:mxcd.core.cqrs.ICommander`1">
+            <summary>
+            Commands for entity
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:mxcd.core.cqrs.ICommander`1.Add(`0)">
+            <summary>
+            Add an item
+            </summary>
+            <param name="item">item to add</param>
+        </member>
+        <member name="M:mxcd.core.cqrs.ICommander`1.Update(`0)">
+            <summary>
+            Update an entity
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.cqrs.ICommander`1.Update``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},``0)">
+            <summary>
+            Update by expression
+            </summary>
+            <typeparam name="TUpdate">Object type</typeparam>
+            <param name="expression">expression</param>
+            <param name="objToUpdate">data to update</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.cqrs.ICommander`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Remove entities
+            </summary>
+            <param name="expression">Expresion</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.cqrs.ICommander`1.Delete``1(``0)">
+            <summary>
+            Remove an entity
+            </summary>
+            <param name="key">Unique key</param>
+            <returns></returns>
+        </member>
+        <member name="T:mxcd.core.cqrs.IQuerier`1">
+            <summary>
+            Querirer
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:mxcd.core.cqrs.IQuerier`1.Get(System.Linq.Expressions.Expression{System.Func{`0}})">
+            <summary>
+            Gets a collection of T
+            </summary>
+            <param name="expression">filter</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.cqrs.IQuerier`1.Get``1(``0)">
+            <summary>
+            Gets a entity
+            </summary>
+            <typeparam name="TKey">Type of key</typeparam>
+            <param name="key">Unique key</param>
+            <returns></returns>
+        </member>
         <member name="T:mxcd.core.entities.IEntity">
             <summary>
             Entity
