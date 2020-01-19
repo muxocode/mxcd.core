@@ -6,6 +6,7 @@ using mxcd.core.rules;
 using mxcd.core.rules.implementations;
 using Moq;
 using core.test.clases;
+using System.Diagnostics;
 
 namespace core.test.implementations
 {
@@ -117,6 +118,7 @@ namespace core.test.implementations
             {
                 await Task.Run(() =>
                 {
+                    Trace.WriteLine($"PruebaSinTaskAll {i}");
                     System.Threading.Thread.Sleep(500);
                 });
             }
@@ -131,6 +133,7 @@ namespace core.test.implementations
             {
                 aLista.Add(Task.Run(() =>
                 {
+                    Trace.WriteLine($"PruebaConTaskAll {i}");
                     System.Threading.Thread.Sleep(500);
                 }));
             }

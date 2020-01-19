@@ -47,18 +47,18 @@ namespace mxcd.core.unitOfWork
         /// <typeparam name="T">Type</typeparam>
         /// <param name="types">Types to filter</param>
         /// <returns></returns>
-        Task<IDictionary<TypePending, IEnumerable<T>>> GetEntities<T>(params TypePending[] types) where T : IEntity;
+        IDictionary<TypePending, IEnumerable<T>> GetEntities<T>(params TypePending[] types) where T : IEntity;
         /// <summary>
         /// Get pending objects
         /// </summary>
         /// <param name="types">Types to filter</param>
         /// <returns></returns>
-        Task<IDictionary<TypePending, IEnumerable<IEntity>>> GetEntities(params TypePending[] types);
+        IDictionary<TypePending, IEnumerable<IEntity>> GetEntities(params TypePending[] types);
         /// <summary>
         /// Get pending actions
         /// </summary>
         /// <returns></returns>
-        Task<IEnumerable<Action>> GetActions();
+        IEnumerable<Action> GetActions();
         /// <summary>
         /// Clears the colection
         /// </summary>
