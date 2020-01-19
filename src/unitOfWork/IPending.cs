@@ -59,5 +59,9 @@ namespace mxcd.core.unitOfWork
         /// </summary>
         /// <returns></returns>
         Task<IEnumerable<Action>> GetActions();
+        /// <summary>
+        /// Clears the colection
+        /// </summary>
+        void Clear();
     }
 }

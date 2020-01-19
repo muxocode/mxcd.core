@@ -129,6 +129,18 @@
             Unique field of entity
             </summary>
         </member>
+        <member name="T:mxcd.core.factory.IFactory`2">
+            <summary>
+            Factory pattern
+            </summary>
+        </member>
+        <member name="M:mxcd.core.factory.IFactory`2.Create(`0)">
+            <summary>
+            Creates an entity of <typeparamref name="TOut"/>
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
         <member name="T:mxcd.core.rules.implementations.RuleProcessor`1">
             <summary>
             Rule processor
@@ -359,6 +371,11 @@
             Get pending actions
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.Clear">
+            <summary>
+            Clears the colection
+            </summary>
         </member>
         <member name="T:mxcd.core.unitOfWork.IUnitOfWork">
             <summary>
