@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace mxcd.core.rules.implementations
@@ -29,12 +30,12 @@ namespace mxcd.core.rules.implementations
         /// <returns></returns>
         public async Task<bool> CheckRules(T entity)
         {
+            var result = await Task.WhenAll(Rules.Select(x => x.Check(entity)));
             var bResult = true;
-            foreach (var rule in Rules)
+            foreach (var item in result)
             {
-                bResult &= await rule.Check(entity);
+                bResult &= item;
             }
-
             return bResult;
         }
     }

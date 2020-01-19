@@ -13,3 +13,4 @@
 /.vs/core/v16
 /core.sample/obj
 /.vs/mxcd.core/v16
+/core.sample/bin/Release/netcoreapp3.0

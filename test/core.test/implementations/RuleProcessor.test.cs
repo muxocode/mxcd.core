@@ -108,5 +108,34 @@ namespace core.test.implementations
             // Assert
             Assert.False(result);
         }
+
+        [Fact]
+        public async Task PruebaSinTaskAll()
+        {
+            // Arrange
+            for (int i = 0; i < 100; i++)
+            {
+                await Task.Run(() =>
+                {
+                    System.Threading.Thread.Sleep(500);
+                });
+            }
+        }
+
+        [Fact]
+        public async Task PruebaConTaskAll()
+        {
+            List<Task> aLista = new List<Task>();
+            // Arrange
+            for (int i = 0; i < 100; i++)
+            {
+                aLista.Add(Task.Run(() =>
+                {
+                    System.Threading.Thread.Sleep(500);
+                }));
+            }
+
+            await Task.WhenAll(aLista);
+        }
     }
 }

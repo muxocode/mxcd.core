@@ -5,11 +5,10 @@ using System.Text;
 
 namespace core.test.clases
 {
-    public class TestUser : IEntity<long>
+    public class TestUser : IEntity
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
-
+        public int Id { get; set; }
         object IEntity.Id => this.Id;
+
     }
 }

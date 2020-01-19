@@ -17,6 +17,11 @@ namespace core.sample
 
     public class UserRepository : IEntityRepository<User>
     {
+        public Task Add(User item)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task Delete(User obj)
         {
             throw new NotImplementedException();
@@ -32,6 +37,11 @@ namespace core.sample
             throw new NotImplementedException();
         }
 
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IEnumerable<User>> Get(Expression<Func<User, bool>> expression = null)
         {
             throw new NotImplementedException();
@@ -43,6 +53,11 @@ namespace core.sample
         }
 
         public Task Insert(User obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Remove(params User[] items)
         {
             throw new NotImplementedException();
         }
