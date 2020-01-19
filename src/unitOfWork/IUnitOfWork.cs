@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace mxcd.core.unitOfWork
 {
@@ -10,10 +11,10 @@ namespace mxcd.core.unitOfWork
         /// <summary>
         /// Save pending changes
         /// </summary>
-        void SaveChanges();
+        Task SaveChanges();
         /// <summary>
         /// Discard pending changes
         /// </summary>
-        void DiscardChanges();
+        Task DiscardChanges();
     }
 }
