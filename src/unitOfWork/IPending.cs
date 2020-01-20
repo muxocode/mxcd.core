@@ -16,21 +16,21 @@ namespace mxcd.core.unitOfWork
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="obj">Entity</param>
-        Task Add<T>(T obj) where T : IEntity;
+        Task Add<T>(T obj) where T : class, IEntity;
         /// <summary>
         /// Updates an entiry
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="obj">Entity</param>
         /// <returns></returns>
-        Task Update<T>(T obj) where T : IEntity;
+        Task Update<T>(T obj) where T : class, IEntity;
         /// <summary>
         /// Removes an object
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="obj">Entity</param>
         /// <returns></returns>
-        Task Remove<T>(T obj) where T : IEntity;
+        Task Remove<T>(T obj) where T : class, IEntity;
         /// <summary>
         /// Add a new action
         /// </summary>
@@ -50,14 +50,14 @@ namespace mxcd.core.unitOfWork
         /// <typeparam name="T"></typeparam>
         /// <param name="obj"></param>
         /// <returns></returns>
-        Task Discard<T>(params T[] obj) where T : IEntity;
+        Task Discard<T>(params T[] obj) where T : class, IEntity;
         /// <summary>
         /// Get pending objects
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="types">Types to filter</param>
         /// <returns></returns>
-        IDictionary<TypePending, IEnumerable<T>> GetEntities<T>(params TypePending[] types) where T : IEntity;
+        IDictionary<TypePending, IEnumerable<T>> GetEntities<T>(params TypePending[] types) where T : class, IEntity;
         /// <summary>
         /// Get pending objects
         /// </summary>
