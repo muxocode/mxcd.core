@@ -356,19 +356,6 @@
             <param name="filter"></param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Discard">
-            <summary>
-            Clears the colection
-            </summary>
-        </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Discard``1(``0[])">
-            <summary>
-            Discard an object
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="obj"></param>
-            <returns></returns>
-        </member>
         <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.GetPendingEntities``1(mxcd.core.unitOfWork.enums.TypePending[])">
             <summary>
             Get pending objects
@@ -382,6 +369,13 @@
             Get pending objects
             </summary>
             <param name="types">Types to filter</param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.AddPendingAction(System.Action)">
+            <summary>
+            Add an action to execute con SaveChanges
+            </summary>
+            <param name="action"></param>
             <returns></returns>
         </member>
         <member name="T:mxcd.core.unitOfWork.IUnitOfWork">

@@ -47,17 +47,6 @@ namespace mxcd.core.unitOfWork
         /// <returns></returns>
         Task Remove<T>(Expression<Func<T, bool>> filter = null) where T : class, IEntity;
         /// <summary>
-        /// Clears the colection
-        /// </summary>
-        Task Discard();
-        /// <summary>
-        /// Discard an object
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        Task Discard<T>(params T[] obj) where T : class, IEntity;
-        /// <summary>
         /// Get pending objects
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
@@ -70,5 +59,11 @@ namespace mxcd.core.unitOfWork
         /// <param name="types">Types to filter</param>
         /// <returns></returns>
         IDictionary<TypePending, IEnumerable<IEntity>> GetPendingEntities(params TypePending[] types);
+        /// <summary>
+        /// Add an action to execute con SaveChanges
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        Task AddPendingAction(Action action);
     }
 }
