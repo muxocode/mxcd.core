@@ -345,10 +345,23 @@
             Add a new action
             </summary>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.Remove(System.Action)">
+        <member name="M:mxcd.core.unitOfWork.IPending.DiscardActions">
             <summary>
-            Removes an action
+            Discard an action
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.Discard">
+            <summary>
+            Clears the colection
+            </summary>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IPending.Discard``1(``0[])">
+            <summary>
+            Discard an object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="M:mxcd.core.unitOfWork.IPending.GetEntities``1(mxcd.core.unitOfWork.enums.TypePending[])">
@@ -371,11 +384,6 @@
             Get pending actions
             </summary>
             <returns></returns>
-        </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.Clear">
-            <summary>
-            Clears the colection
-            </summary>
         </member>
         <member name="T:mxcd.core.unitOfWork.IUnitOfWork">
             <summary>

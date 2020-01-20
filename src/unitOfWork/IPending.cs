@@ -2,7 +2,6 @@
 using mxcd.core.unitOfWork.enums;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace mxcd.core.unitOfWork
@@ -37,10 +36,21 @@ namespace mxcd.core.unitOfWork
         /// </summary>
         Task Add(Action obj);
         /// <summary>
-        /// Removes an action
+        /// Discard an action
         /// </summary>
         /// <returns></returns>
-        Task Remove(Action obj);
+        Task DiscardActions();
+        /// <summary>
+        /// Clears the colection
+        /// </summary>
+        Task Discard();
+        /// <summary>
+        /// Discard an object
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        Task Discard<T>(params T[] obj) where T : IEntity;
         /// <summary>
         /// Get pending objects
         /// </summary>
@@ -59,9 +69,5 @@ namespace mxcd.core.unitOfWork
         /// </summary>
         /// <returns></returns>
         IEnumerable<Action> GetActions();
-        /// <summary>
-        /// Clears the colection
-        /// </summary>
-        void Clear();
     }
 }
