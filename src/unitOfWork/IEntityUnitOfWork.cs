@@ -2,6 +2,7 @@
 using mxcd.core.unitOfWork.enums;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace mxcd.core.unitOfWork
@@ -9,7 +10,7 @@ namespace mxcd.core.unitOfWork
     /// <summary>
     /// Pending entities
     /// </summary>
-    public interface IPending : IDisposable
+    public interface IEntityUnitOfWork : IUnitOfWork
     {
         /// <summary>
         /// Add a new entity
@@ -18,12 +19,19 @@ namespace mxcd.core.unitOfWork
         /// <param name="obj">Entity</param>
         Task Add<T>(T obj) where T : class, IEntity;
         /// <summary>
-        /// Updates an entiry
+        /// Updates an entity
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="obj">Entity</param>
         /// <returns></returns>
         Task Update<T>(T obj) where T : class, IEntity;
+        /// <summary>
+        /// Updates the entities in the database
+        /// </summary>
+        /// <typeparam name="T">Type</typeparam>
+        /// <typeparam name="P">Type</typeparam>
+        /// <returns></returns>
+        Task Update<T, P>(Expression<Func<T, bool>> filter, P updateData) where T : class, IEntity where P : class;
         /// <summary>
         /// Removes an object
         /// </summary>
@@ -32,14 +40,12 @@ namespace mxcd.core.unitOfWork
         /// <returns></returns>
         Task Remove<T>(T obj) where T : class, IEntity;
         /// <summary>
-        /// Add a new action
+        /// Remove a set of objects
         /// </summary>
-        Task Add(Action obj);
-        /// <summary>
-        /// Discard an action
-        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="filter"></param>
         /// <returns></returns>
-        Task DiscardActions();
+        Task Remove<T>(Expression<Func<T, bool>> filter = null) where T : class, IEntity;
         /// <summary>
         /// Clears the colection
         /// </summary>
@@ -57,17 +63,12 @@ namespace mxcd.core.unitOfWork
         /// <typeparam name="T">Type</typeparam>
         /// <param name="types">Types to filter</param>
         /// <returns></returns>
-        IDictionary<TypePending, IEnumerable<T>> GetEntities<T>(params TypePending[] types) where T : class, IEntity;
+        IDictionary<TypePending, IEnumerable<T>> GetPendingEntities<T>(params TypePending[] types) where T : class, IEntity;
         /// <summary>
         /// Get pending objects
         /// </summary>
         /// <param name="types">Types to filter</param>
         /// <returns></returns>
-        IDictionary<TypePending, IEnumerable<IEntity>> GetEntities(params TypePending[] types);
-        /// <summary>
-        /// Get pending actions
-        /// </summary>
-        /// <returns></returns>
-        IEnumerable<Action> GetActions();
+        IDictionary<TypePending, IEnumerable<IEntity>> GetPendingEntities(params TypePending[] types);
     }
 }

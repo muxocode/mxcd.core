@@ -312,27 +312,35 @@
             Inser actions
             </summary>
         </member>
-        <member name="T:mxcd.core.unitOfWork.IPending">
+        <member name="T:mxcd.core.unitOfWork.IEntityUnitOfWork">
             <summary>
             Pending entities
             </summary>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.Add``1(``0)">
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Add``1(``0)">
             <summary>
             Add a new entity
             </summary>
             <typeparam name="T">Type</typeparam>
             <param name="obj">Entity</param>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.Update``1(``0)">
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Update``1(``0)">
             <summary>
-            Updates an entiry
+            Updates an entity
             </summary>
             <typeparam name="T">Type</typeparam>
             <param name="obj">Entity</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.Remove``1(``0)">
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Update``2(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},``1)">
+            <summary>
+            Updates the entities in the database
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <typeparam name="P">Type</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Remove``1(``0)">
             <summary>
             Removes an object
             </summary>
@@ -340,23 +348,20 @@
             <param name="obj">Entity</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.Add(System.Action)">
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Remove``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>
-            Add a new action
+            Remove a set of objects
             </summary>
-        </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.DiscardActions">
-            <summary>
-            Discard an action
-            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filter"></param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.Discard">
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Discard">
             <summary>
             Clears the colection
             </summary>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.Discard``1(``0[])">
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Discard``1(``0[])">
             <summary>
             Discard an object
             </summary>
@@ -364,7 +369,7 @@
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.GetEntities``1(mxcd.core.unitOfWork.enums.TypePending[])">
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.GetPendingEntities``1(mxcd.core.unitOfWork.enums.TypePending[])">
             <summary>
             Get pending objects
             </summary>
@@ -372,17 +377,11 @@
             <param name="types">Types to filter</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.GetEntities(mxcd.core.unitOfWork.enums.TypePending[])">
+        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.GetPendingEntities(mxcd.core.unitOfWork.enums.TypePending[])">
             <summary>
             Get pending objects
             </summary>
             <param name="types">Types to filter</param>
-            <returns></returns>
-        </member>
-        <member name="M:mxcd.core.unitOfWork.IPending.GetActions">
-            <summary>
-            Get pending actions
-            </summary>
             <returns></returns>
         </member>
         <member name="T:mxcd.core.unitOfWork.IUnitOfWork">
