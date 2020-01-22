@@ -371,13 +371,6 @@
             <param name="types">Types to filter</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.AddPendingAction(System.Action)">
-            <summary>
-            Add an action to execute con SaveChanges
-            </summary>
-            <param name="action"></param>
-            <returns></returns>
-        </member>
         <member name="T:mxcd.core.unitOfWork.IUnitOfWork">
             <summary>
             Unit of work
@@ -392,6 +385,13 @@
             <summary>
             Discard pending changes
             </summary>
+        </member>
+        <member name="M:mxcd.core.unitOfWork.IUnitOfWork.AddPendingAction(System.Action)">
+            <summary>
+            Add an action to execute before SaveChanges
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
         </member>
         <member name="T:mxcd.core.unitOfWork.enums.TypePending">
             <summary>

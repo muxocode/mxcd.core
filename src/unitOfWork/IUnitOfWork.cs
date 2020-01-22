@@ -16,5 +16,11 @@ namespace mxcd.core.unitOfWork
         /// Discard pending changes
         /// </summary>
         Task DiscardChanges();
+        /// <summary>
+        /// Add an action to execute before SaveChanges
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        Task AddPendingAction(Action action);
     }
 }

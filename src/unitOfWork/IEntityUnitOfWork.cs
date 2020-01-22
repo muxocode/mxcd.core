@@ -59,11 +59,5 @@ namespace mxcd.core.unitOfWork
         /// <param name="types">Types to filter</param>
         /// <returns></returns>
         IDictionary<TypePending, IEnumerable<IEntity>> GetPendingEntities(params TypePending[] types);
-        /// <summary>
-        /// Add an action to execute con SaveChanges
-        /// </summary>
-        /// <param name="action"></param>
-        /// <returns></returns>
-        Task AddPendingAction(Action action);
     }
 }
