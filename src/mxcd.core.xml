@@ -223,14 +223,14 @@
             <param name="objToUpdate">data to update</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IEntityRepository`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:mxcd.core.repository.IEntityRepository`1.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Remove entities
             </summary>
             <param name="expression">Expresion</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IEntityRepository`1.Delete``1(``0)">
+        <member name="M:mxcd.core.repository.IEntityRepository`1.Remove``1(``0)">
             <summary>
             Remove an entity
             </summary>

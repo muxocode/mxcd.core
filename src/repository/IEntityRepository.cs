@@ -34,12 +34,12 @@ namespace mxcd.core.repository
         /// </summary>
         /// <param name="expression">Expresion</param>
         /// <returns></returns>
-        Task Delete(Expression<Func<T, bool>> expression);
+        Task Remove(Expression<Func<T, bool>> expression);
         /// <summary>
         /// Remove an entity
         /// </summary>
         /// <param name="key">Unique key</param>
         /// <returns></returns>
-        Task Delete<TKey>(TKey key);
+        Task Remove<TKey>(TKey key);
     }
 }
