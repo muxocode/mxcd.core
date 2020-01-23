@@ -28,7 +28,7 @@ namespace mxcd.core.repository
         /// <param name="expression">expression</param>
         /// <param name="objToUpdate">data to update</param>
         /// <returns></returns>
-        Task Update<TUpdate>(Expression<Func<T, bool>> expression, TUpdate objToUpdate);
+        Task Update<TUpdate>(Expression<Func<T, bool>> expression, TUpdate objToUpdate) where TUpdate:class;
         /// <summary>
         /// Remove entities
         /// </summary>
