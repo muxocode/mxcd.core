@@ -286,6 +286,26 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:mxcd.core.services.IErrorHandler">
+            <summary>
+            Error handler
+            </summary>
+        </member>
+        <member name="M:mxcd.core.services.IErrorHandler.Trace(System.String,System.Exception)">
+            <summary>
+            Trace an error
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="M:mxcd.core.services.IErrorHandler.Trace(System.Exception)">
+            <summary>
+            Trace an error
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
         <member name="T:mxcd.core.services.IService`1">
             <summary>
             Repository with actions asociated
