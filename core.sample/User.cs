@@ -1,5 +1,4 @@
-﻿using mxcd.core.entities;
-using mxcd.core.repository;
+﻿using mxcd.core.repository;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -7,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace core.sample
 {
-    public class User : IEntity
+    public class User
     {
         public long Id { get; }
-
-        object IEntity.Id => this.Id;
     }
 
     public class UserRepository : IEntityRepository<User>
@@ -26,7 +23,7 @@ namespace core.sample
             throw new NotImplementedException();
         }
 
-        public Task<User> Get<TKey>(TKey key)
+        public Task<User> Find<TKey>(TKey key)
         {
             throw new NotImplementedException();
         }
@@ -67,7 +64,7 @@ namespace core.sample
         void main()
         {
             var repo = new UserRepository();
-            var user= repo.Get(new Guid());
+            var user= repo.Find(new Guid());
             repo.Update(x => x.Id > 3, new { name = "Miguel" });
         }
     }

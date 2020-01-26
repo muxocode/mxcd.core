@@ -1,5 +1,4 @@
-﻿using mxcd.core.entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -10,7 +9,7 @@ namespace mxcd.core.services
     /// Repository with actions asociated
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IService<T> where T : IEntity
+    public interface IService<T>
     {
         /// <summary>
         /// Get a set of entities
@@ -22,7 +21,7 @@ namespace mxcd.core.services
         /// </summary>
         /// <param name="key">Unique key</param>
         /// <returns></returns>
-        Task<T> Get<TKey>(TKey key);
+        Task<T> Find<TKey>(TKey key);
         /// <summary>
         /// Update an entity
         /// </summary>

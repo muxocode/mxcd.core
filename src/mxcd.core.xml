@@ -66,16 +66,6 @@
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.entities.IEntity">
-            <summary>
-            Entity
-            </summary>
-        </member>
-        <member name="P:mxcd.core.entities.IEntity.Id">
-            <summary>
-            Unique field of entity
-            </summary>
-        </member>
         <member name="T:mxcd.core.factory.IFactory`2">
             <summary>
             Factory pattern
@@ -148,7 +138,7 @@
             Repository pattern for entities
             </summary>
         </member>
-        <member name="M:mxcd.core.repository.IEntityRepository`1.Get``1(``0)">
+        <member name="M:mxcd.core.repository.IEntityRepository`1.Find``1(``0)">
             <summary>
             Get a specific entity
             </summary>
@@ -265,7 +255,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Get``1(``0)">
+        <member name="M:mxcd.core.services.IService`1.Find``1(``0)">
             <summary>
             Get a specific entity
             </summary>
