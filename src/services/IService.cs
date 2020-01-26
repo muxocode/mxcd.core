@@ -14,7 +14,7 @@ namespace mxcd.core.services
         /// Get a set of entities
         /// </summary>
         /// <returns></returns>
-        Task<IEnumerable<T>> Get<TKey>();
+        Task<IEnumerable<T>> Get();
         /// <summary>
         /// Get a specific entity
         /// </summary>

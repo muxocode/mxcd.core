@@ -259,7 +259,7 @@
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Get``1">
+        <member name="M:mxcd.core.services.IService`1.Get">
             <summary>
             Get a set of entities
             </summary>
