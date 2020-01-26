@@ -1,5 +1,7 @@
 ﻿using mxcd.core.entities;
+using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace mxcd.core.services
@@ -14,7 +16,7 @@ namespace mxcd.core.services
         /// Get a set of entities
         /// </summary>
         /// <returns></returns>
-        Task<IEnumerable<T>> Get();
+        Task<IEnumerable<T>> Get(Expression<Func<T, bool>> filter = null);
         /// <summary>
         /// Get a specific entity
         /// </summary>

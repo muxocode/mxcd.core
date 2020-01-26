@@ -259,7 +259,7 @@
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Get">
+        <member name="M:mxcd.core.services.IService`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Get a set of entities
             </summary>
