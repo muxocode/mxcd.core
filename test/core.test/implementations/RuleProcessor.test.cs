@@ -39,6 +39,18 @@ namespace core.test.implementations
         {
             this.mockRepository.VerifyAll();
         }*/
+        [Fact]
+        public async Task NULL()
+        {
+            // Arrange
+            var ruleProcessor = new RuleProcessor<TestUser>(null);
+
+            // Act
+            var result = await ruleProcessor.CheckRules(new TestUser());
+
+            // Assert
+            Assert.True(result);
+        }
 
         [Fact]
         public async Task Correct()
@@ -110,7 +122,7 @@ namespace core.test.implementations
             Assert.False(result);
         }
 
-        [Fact]
+        /*[Fact]
         public async Task PruebaSinTaskAll()
         {
             // Arrange
@@ -139,6 +151,6 @@ namespace core.test.implementations
             }
 
             await Task.WhenAll(aLista);
-        }
+        }*/
     }
 }

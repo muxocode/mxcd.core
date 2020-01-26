@@ -30,11 +30,14 @@ namespace mxcd.core.rules.implementations
         /// <returns></returns>
         public async Task<bool> CheckRules(T entity)
         {
-            var result = await Task.WhenAll(Rules.Select(x => x.Check(entity)));
             var bResult = true;
-            foreach (var item in result)
+            if (this.Rules != null)
             {
-                bResult &= item;
+                var result = await Task.WhenAll(Rules.Select(x => x.Check(entity)));
+                foreach (var item in result)
+                {
+                    bResult &= item;
+                }
             }
             return bResult;
         }
