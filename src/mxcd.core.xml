@@ -278,6 +278,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:mxcd.core.services.IService`1.Insert(`0)">
+            <summary>
+            Insert an entity
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:mxcd.core.services.IService`1.Remove``1(``0)">
             <summary>
             Remove an entity

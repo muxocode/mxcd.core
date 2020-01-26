@@ -27,6 +27,11 @@ namespace mxcd.core.services
         /// <returns></returns>
         Task Update(T obj);
         /// <summary>
+        /// Insert an entity
+        /// </summary>
+        /// <returns></returns>
+        Task Insert(T obj);
+        /// <summary>
         /// Remove an entity
         /// </summary>
         /// <param name="key">Unique key</param>
