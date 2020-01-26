@@ -30,7 +30,7 @@ namespace mxcd.core.services
         /// Insert an entity
         /// </summary>
         /// <returns></returns>
-        Task Insert(T obj);
+        Task<T> Insert(T obj);
         /// <summary>
         /// Remove an entity
         /// </summary>
