@@ -14,7 +14,11 @@ namespace mxcd.core.actions
         /// <summary>
         /// After action
         /// </summary>
-        after
+        after,
+        /// <summary>
+        /// During the action
+        /// </summary>
+        meanwhile
     }
     /// <summary>
     /// Action interface

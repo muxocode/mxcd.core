@@ -1,7 +1,7 @@
 ﻿using mxcd.core.actions;
 using mxcd.core.entities;
-using mxcd.core.repository;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace mxcd.core.services
 {
@@ -9,7 +9,7 @@ namespace mxcd.core.services
     /// Repository with actions asociated
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IService<T>: IEntityRepository<T> where T : IEntity
+    public interface IService<T> where T : IEntity
     {
         /// <summary>
         /// Get actions
@@ -27,5 +27,33 @@ namespace mxcd.core.services
         /// Inser actions
         /// </summary>
         IEnumerable<IInsertAction<T>> InsertActions { get; }
+
+        /// <summary>
+        /// Get a set of entities
+        /// </summary>
+        /// <returns></returns>
+        Task<IEnumerable<T>> Get<TKey>();
+        /// <summary>
+        /// Get a specific entity
+        /// </summary>
+        /// <param name="key">Unique key</param>
+        /// <returns></returns>
+        Task<T> Get<TKey>(TKey key);
+        /// <summary>
+        /// Update an entity
+        /// </summary>
+        /// <returns></returns>
+        Task Update(T obj);
+        /// <summary>
+        /// Remove an entity
+        /// </summary>
+        /// <param name="key">Unique key</param>
+        /// <returns></returns>
+        Task Remove<TKey>(TKey key);
+        /// <summary>
+        /// Remove an entity
+        /// </summary>
+        /// <returns></returns>
+        Task Remove(T obj);
     }
 }
