@@ -1,5 +1,4 @@
 ﻿using mxcd.core.entities;
-using mxcd.core.rules;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,10 +10,6 @@ namespace mxcd.core.services
     /// <typeparam name="T"></typeparam>
     public interface IService<T> where T : IEntity
     {
-        /// <summary>
-        /// Rules for entity
-        /// </summary>
-        IEnumerable<IRule<T>> Rules { get; }
         /// <summary>
         /// Get a set of entities
         /// </summary>
