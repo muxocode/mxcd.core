@@ -1,5 +1,5 @@
-﻿using mxcd.core.actions;
-using mxcd.core.entities;
+﻿using mxcd.core.entities;
+using mxcd.core.rules;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -12,22 +12,9 @@ namespace mxcd.core.services
     public interface IService<T> where T : IEntity
     {
         /// <summary>
-        /// Get actions
+        /// Rules for entity
         /// </summary>
-        IEnumerable<IGetAction<T>> GetActions { get; }
-        /// <summary>
-        /// Delete actions
-        /// </summary>
-        IEnumerable<IDeleteAction<T>> DeleteActions { get; }
-        /// <summary>
-        /// Update actions
-        /// </summary>
-        IEnumerable<IUpdateAction<T>> UpdateActions { get; }
-        /// <summary>
-        /// Inser actions
-        /// </summary>
-        IEnumerable<IInsertAction<T>> InsertActions { get; }
-
+        IEnumerable<IRule<T>> Rules { get; }
         /// <summary>
         /// Get a set of entities
         /// </summary>

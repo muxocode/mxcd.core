@@ -4,64 +4,6 @@
         <name>mxcd.core</name>
     </assembly>
     <members>
-        <member name="T:mxcd.core.actions.ActionTime">
-            <summary>
-            Moment of the action
-            </summary>
-        </member>
-        <member name="F:mxcd.core.actions.ActionTime.before">
-            <summary>
-            Before action
-            </summary>
-        </member>
-        <member name="F:mxcd.core.actions.ActionTime.after">
-            <summary>
-            After action
-            </summary>
-        </member>
-        <member name="F:mxcd.core.actions.ActionTime.meanwhile">
-            <summary>
-            During the action
-            </summary>
-        </member>
-        <member name="T:mxcd.core.actions.IAction`1">
-            <summary>
-            Action interface
-            </summary>
-            <typeparam name="T">Type</typeparam>
-        </member>
-        <member name="M:mxcd.core.actions.IAction`1.Do(`0,mxcd.core.actions.ActionTime)">
-            <summary>
-            Run operation
-            </summary>
-            <param name="obj">entity</param>
-            <param name="actionTime">Action moment</param>
-            <returns></returns>
-        </member>
-        <member name="T:mxcd.core.actions.IDeleteAction`1">
-            <summary>
-            Action to execute before delete an entity
-            </summary>
-            <typeparam name="T">Type</typeparam>
-        </member>
-        <member name="T:mxcd.core.actions.IGetAction`1">
-            <summary>
-            Action to execute after get an entity
-            </summary>
-            <typeparam name="T">Type</typeparam>
-        </member>
-        <member name="T:mxcd.core.actions.IInsertAction`1">
-            <summary>
-            Action to execute after insert an entity
-            </summary>
-            <typeparam name="T">Type</typeparam>
-        </member>
-        <member name="T:mxcd.core.actions.IUpdateAction`1">
-            <summary>
-            Action to execute before update an entity
-            </summary>
-            <typeparam name="T">Type</typeparam>
-        </member>
         <member name="T:mxcd.core.cqrs.ICommander`1">
             <summary>
             Commands for entity
@@ -317,24 +259,9 @@
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="P:mxcd.core.services.IService`1.GetActions">
+        <member name="P:mxcd.core.services.IService`1.Rules">
             <summary>
-            Get actions
-            </summary>
-        </member>
-        <member name="P:mxcd.core.services.IService`1.DeleteActions">
-            <summary>
-            Delete actions
-            </summary>
-        </member>
-        <member name="P:mxcd.core.services.IService`1.UpdateActions">
-            <summary>
-            Update actions
-            </summary>
-        </member>
-        <member name="P:mxcd.core.services.IService`1.InsertActions">
-            <summary>
-            Inser actions
+            Rules for entity
             </summary>
         </member>
         <member name="M:mxcd.core.services.IService`1.Get``1">

@@ -3,7 +3,6 @@ using mxcd.core.repository;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace core.sample
@@ -22,27 +21,7 @@ namespace core.sample
             throw new NotImplementedException();
         }
 
-        public Task Delete(User obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task Delete(Expression<Func<User, bool>> expression)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task Delete<TKey>(TKey key)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<User>> Get(Expression<Func<User, bool>> expression = null)
         {
             throw new NotImplementedException();
         }
@@ -52,7 +31,17 @@ namespace core.sample
             throw new NotImplementedException();
         }
 
-        public Task Insert(User obj)
+        public Task<IEnumerable<User>> Get(Expression<Func<User, bool>> expression = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Remove(Expression<Func<User, bool>> expression)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Remove<TKey>(TKey key)
         {
             throw new NotImplementedException();
         }
@@ -67,7 +56,7 @@ namespace core.sample
             throw new NotImplementedException();
         }
 
-        public Task Update<TUpdate>(Expression<Func<User, bool>> expression, TUpdate objToUpdate)
+        public Task Update<TUpdate>(Expression<Func<User, bool>> expression, TUpdate objToUpdate) where TUpdate : class
         {
             throw new NotImplementedException();
         }
