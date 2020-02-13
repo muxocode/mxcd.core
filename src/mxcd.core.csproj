@@ -15,7 +15,7 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright></Copyright>
     <RepositoryUrl></RepositoryUrl>
-    <FileVersion>1.8.2.0</FileVersion>
+    <FileVersion>1.8.3.0</FileVersion>
     <AssemblyVersion>1.8.3.0</AssemblyVersion>
   </PropertyGroup>
 
@@ -27,7 +27,6 @@
 	<PackageReleaseNotes></PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="license.txt" />
     <None Include="license.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
