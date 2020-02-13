@@ -33,6 +33,11 @@ namespace core.sample
             throw new NotImplementedException();
         }
 
+        public IEnumerable<User> GetSync(Expression<Func<User, bool>> expression = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task Remove(Expression<Func<User, bool>> expression)
         {
             throw new NotImplementedException();

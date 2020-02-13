@@ -15,6 +15,11 @@ namespace mxcd.core.services
         /// Get a set of entities
         /// </summary>
         /// <returns></returns>
+        IEnumerable<T> GetSync(Expression<Func<T, bool>> filter = null);
+        /// <summary>
+        /// Get a set of entities
+        /// </summary>
+        /// <returns></returns>
         Task<IEnumerable<T>> Get(Expression<Func<T, bool>> filter = null);
         /// <summary>
         /// Get a specific entity
