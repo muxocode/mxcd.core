@@ -23,11 +23,6 @@ namespace mxcd.core.repository
         /// <param name="expression">Filter</param>
         Task<IEnumerable<T>> Get(Expression<Func<T, bool>> expression = null);
         /// <summary>
-        /// Gets elements from repository
-        /// </summary>
-        /// <param name="expression">Filter</param>
-        IEnumerable<T> GetSync(Expression<Func<T, bool>> expression = null);
-        /// <summary>
         /// Removes items from repository
         /// </summary>
         Task Remove(params T[] items);
