@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\mxcd.core.csproj" />
+    <ProjectReference Include="..\src\mxcd.crossapp.csproj" />
   </ItemGroup>
 
 </Project>

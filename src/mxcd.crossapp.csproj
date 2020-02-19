@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.8.4</Version>
-    <PackageId>mxcd.core</PackageId>
+    <Version>1.0.1</Version>
+    <PackageId>mxcd.crossapp</PackageId>
     <Authors>https://muxocode.com</Authors>
-    <Product>mxcd.core</Product>
+    <Product>mxcd.crossapp</Product>
     <Description>Basic interfaces</Description>
-    <PackageProjectUrl>https://github.com/muxocode/mxcd.core</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/muxocode/mxcd.crossapp</PackageProjectUrl>
     <PackageIconUrl>https://muxocode.com/icon.png</PackageIconUrl>
     <Company>muxocode</Company>
     <PackageTags>muxocode mxcd core interfaces</PackageTags>
@@ -15,12 +15,12 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright></Copyright>
     <RepositoryUrl></RepositoryUrl>
-    <FileVersion>1.8.4.0</FileVersion>
-    <AssemblyVersion>1.8.4.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup>
-    <DocumentationFile>C:\sw-dev\Cosas\muxocode\mxcd\core\src\mxcd.core.xml</DocumentationFile>
+    <DocumentationFile>C:\sw-dev\Cosas\muxocode\mxcd\core\src\mxcd.crossapp.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
 	<PackageLicenseFile>license.txt</PackageLicenseFile>

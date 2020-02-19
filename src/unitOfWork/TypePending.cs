@@ -1,4 +1,4 @@
-﻿namespace mxcd.core.unitOfWork.enums
+﻿namespace mxcd.crossapp.unitOfWork.enums
 {
     /// <summary>
     /// Action types, that will execute in order

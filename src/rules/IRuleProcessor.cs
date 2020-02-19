@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace mxcd.core.rules
+namespace mxcd.crossapp.rules
 {
     /// <summary>
     /// Rule processor

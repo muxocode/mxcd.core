@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace mxcd.core.services
+namespace mxcd.crossapp.services
 {
     /// <summary>
     /// Repository with actions asociated

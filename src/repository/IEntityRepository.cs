@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace mxcd.core.repository
+namespace mxcd.crossapp.repository
 {
     /// <summary>
     /// Repository pattern for entities

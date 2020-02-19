@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace mxcd.core.factory
+namespace mxcd.crossapp.factory
 {
     /// <summary>
     /// Factory pattern

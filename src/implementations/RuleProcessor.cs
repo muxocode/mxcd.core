@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace mxcd.core.rules.implementations
+namespace mxcd.crossapp.rules.implementations
 {
     /// <summary>
     /// Rule processor

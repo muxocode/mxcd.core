@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>mxcd.core</name>
+        <name>mxcd.crossapp</name>
     </assembly>
     <members>
-        <member name="T:mxcd.core.cqrs.ICommander`1">
+        <member name="T:mxcd.crossapp.cqrs.ICommander`1">
             <summary>
             Commands for entity
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:mxcd.core.cqrs.ICommander`1.Add(`0)">
+        <member name="M:mxcd.crossapp.cqrs.ICommander`1.Add(`0)">
             <summary>
             Add an item
             </summary>
             <param name="item">item to add</param>
         </member>
-        <member name="M:mxcd.core.cqrs.ICommander`1.Update(`0)">
+        <member name="M:mxcd.crossapp.cqrs.ICommander`1.Update(`0)">
             <summary>
             Update an entity
             </summary>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.cqrs.ICommander`1.Update``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},``0)">
+        <member name="M:mxcd.crossapp.cqrs.ICommander`1.Update``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},``0)">
             <summary>
             Update by expression
             </summary>
@@ -31,34 +31,34 @@
             <param name="objToUpdate">data to update</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.cqrs.ICommander`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:mxcd.crossapp.cqrs.ICommander`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Remove entities
             </summary>
             <param name="expression">Expresion</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.cqrs.ICommander`1.Delete``1(``0)">
+        <member name="M:mxcd.crossapp.cqrs.ICommander`1.Delete``1(``0)">
             <summary>
             Remove an entity
             </summary>
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.cqrs.IQuerier`1">
+        <member name="T:mxcd.crossapp.cqrs.IQuerier`1">
             <summary>
             Querirer
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:mxcd.core.cqrs.IQuerier`1.Get(System.Linq.Expressions.Expression{System.Func{`0}})">
+        <member name="M:mxcd.crossapp.cqrs.IQuerier`1.Get(System.Linq.Expressions.Expression{System.Func{`0}})">
             <summary>
             Gets a collection of T
             </summary>
             <param name="expression">filter</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.cqrs.IQuerier`1.Get``1(``0)">
+        <member name="M:mxcd.crossapp.cqrs.IQuerier`1.Get``1(``0)">
             <summary>
             Gets a entity
             </summary>
@@ -66,92 +66,92 @@
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.factory.IFactory`2">
+        <member name="T:mxcd.crossapp.factory.IFactory`2">
             <summary>
             Factory pattern
             </summary>
         </member>
-        <member name="M:mxcd.core.factory.IFactory`2.Create(`0)">
+        <member name="M:mxcd.crossapp.factory.IFactory`2.Create(`0)">
             <summary>
             Creates an entity of <typeparamref name="TOut"/>
             </summary>
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.rules.implementations.RuleProcessor`1">
+        <member name="T:mxcd.crossapp.rules.implementations.RuleProcessor`1">
             <summary>
             Rule processor
             </summary>
             <typeparam name="T">Type</typeparam>
         </member>
-        <member name="P:mxcd.core.rules.implementations.RuleProcessor`1.Rules">
+        <member name="P:mxcd.crossapp.rules.implementations.RuleProcessor`1.Rules">
             <summary>
             Object that checks the rules of T entity
             </summary>
         </member>
-        <member name="M:mxcd.core.rules.implementations.RuleProcessor`1.#ctor(System.Collections.Generic.IEnumerable{mxcd.core.rules.IRule{`0}})">
+        <member name="M:mxcd.crossapp.rules.implementations.RuleProcessor`1.#ctor(System.Collections.Generic.IEnumerable{mxcd.crossapp.rules.IRule{`0}})">
             <summary>
             Create a RuleProcessor
             </summary>
             <param name="rules">Rules to check</param>
         </member>
-        <member name="M:mxcd.core.rules.implementations.RuleProcessor`1.CheckRules(`0)">
+        <member name="M:mxcd.crossapp.rules.implementations.RuleProcessor`1.CheckRules(`0)">
             <summary>
             Check rules
             </summary>
             <param name="entity">entity</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.rules.IRule`1">
+        <member name="T:mxcd.crossapp.rules.IRule`1">
             <summary>
             Rule
             </summary>
             <typeparam name="T">Type</typeparam>
         </member>
-        <member name="M:mxcd.core.rules.IRule`1.Check(`0)">
+        <member name="M:mxcd.crossapp.rules.IRule`1.Check(`0)">
             <summary>
             Check the rule
             </summary>
             <param name="obj">entity</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.rules.IRuleProcessor`1">
+        <member name="T:mxcd.crossapp.rules.IRuleProcessor`1">
             <summary>
             Rule processor
             </summary>
             <typeparam name="T">Type</typeparam>
         </member>
-        <member name="P:mxcd.core.rules.IRuleProcessor`1.Rules">
+        <member name="P:mxcd.crossapp.rules.IRuleProcessor`1.Rules">
             <summary>
             Rules to check
             </summary>
         </member>
-        <member name="M:mxcd.core.rules.IRuleProcessor`1.CheckRules(`0)">
+        <member name="M:mxcd.crossapp.rules.IRuleProcessor`1.CheckRules(`0)">
             <summary>
             Check rules
             </summary>
             <param name="entity">entity</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.repository.IEntityRepository`1">
+        <member name="T:mxcd.crossapp.repository.IEntityRepository`1">
             <summary>
             Repository pattern for entities
             </summary>
         </member>
-        <member name="M:mxcd.core.repository.IEntityRepository`1.Find``1(``0)">
+        <member name="M:mxcd.crossapp.repository.IEntityRepository`1.Find``1(``0)">
             <summary>
             Get a specific entity
             </summary>
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IEntityRepository`1.Update(`0)">
+        <member name="M:mxcd.crossapp.repository.IEntityRepository`1.Update(`0)">
             <summary>
             Update an entity
             </summary>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IEntityRepository`1.Update``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},``0)">
+        <member name="M:mxcd.crossapp.repository.IEntityRepository`1.Update``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},``0)">
             <summary>
             Update by expression
             </summary>
@@ -160,75 +160,75 @@
             <param name="objToUpdate">data to update</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IEntityRepository`1.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:mxcd.crossapp.repository.IEntityRepository`1.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Remove entities
             </summary>
             <param name="expression">Expresion</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.repository.IEntityRepository`1.Remove``1(``0)">
+        <member name="M:mxcd.crossapp.repository.IEntityRepository`1.Remove``1(``0)">
             <summary>
             Remove an entity
             </summary>
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.repository.IRepository`1">
+        <member name="T:mxcd.crossapp.repository.IRepository`1">
             <summary>
             Repository pattern
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Add(`0)">
+        <member name="M:mxcd.crossapp.repository.IRepository`1.Add(`0)">
             <summary>
             Add an item
             </summary>
             <param name="item">item to add</param>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:mxcd.crossapp.repository.IRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Gets elements from repository
             </summary>
             <param name="expression">Filter</param>
         </member>
-        <member name="M:mxcd.core.repository.IRepository`1.Remove(`0[])">
+        <member name="M:mxcd.crossapp.repository.IRepository`1.Remove(`0[])">
             <summary>
             Removes items from repository
             </summary>
         </member>
-        <member name="T:mxcd.core.services.ICreator`2">
+        <member name="T:mxcd.crossapp.services.ICreator`2">
             <summary>
             Creates an entity of <typeparamref name="TOut"/> from <typeparamref name="TIn"/> value
             </summary>
             <typeparam name="TOut">out entity</typeparam>
             <typeparam name="TIn">input entity</typeparam>
         </member>
-        <member name="M:mxcd.core.services.ICreator`2.Create(`1)">
+        <member name="M:mxcd.crossapp.services.ICreator`2.Create(`1)">
             <summary>
             Create an <typeparamref name="TOut"/> entity
             </summary>
             <param name="data"><typeparamref name="TIn"/> value</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.services.ICreator`1">
+        <member name="T:mxcd.crossapp.services.ICreator`1">
             <summary>
             Creates a <typeparamref name="TOut"/> entity
             </summary>
             <typeparam name="TOut"></typeparam>
         </member>
-        <member name="M:mxcd.core.services.ICreator`1.Create">
+        <member name="M:mxcd.crossapp.services.ICreator`1.Create">
             <summary>
             Creates a <typeparamref name="TOut"/> entity
             </summary>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.services.IErrorHandler">
+        <member name="T:mxcd.crossapp.services.IErrorHandler">
             <summary>
             Error handler
             </summary>
         </member>
-        <member name="M:mxcd.core.services.IErrorHandler.Trace(System.String,System.Exception)">
+        <member name="M:mxcd.crossapp.services.IErrorHandler.Trace(System.String,System.Exception)">
             <summary>
             Trace an error
             </summary>
@@ -236,70 +236,70 @@
             <param name="exception"></param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.services.IErrorHandler.Trace(System.Exception)">
+        <member name="M:mxcd.crossapp.services.IErrorHandler.Trace(System.Exception)">
             <summary>
             Trace an error
             </summary>
             <param name="exception"></param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.services.IService`1">
+        <member name="T:mxcd.crossapp.services.IService`1">
             <summary>
             Repository with actions asociated
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+        <member name="M:mxcd.crossapp.services.IService`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
             <summary>
             Get a set of entities
             </summary>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Find``1(``0)">
+        <member name="M:mxcd.crossapp.services.IService`1.Find``1(``0)">
             <summary>
             Get a specific entity
             </summary>
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Update(`0)">
+        <member name="M:mxcd.crossapp.services.IService`1.Update(`0)">
             <summary>
             Update an entity
             </summary>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Insert(`0)">
+        <member name="M:mxcd.crossapp.services.IService`1.Insert(`0)">
             <summary>
             Insert an entity
             </summary>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Remove``1(``0)">
+        <member name="M:mxcd.crossapp.services.IService`1.Remove``1(``0)">
             <summary>
             Remove an entity
             </summary>
             <param name="key">Unique key</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.services.IService`1.Remove(`0)">
+        <member name="M:mxcd.crossapp.services.IService`1.Remove(`0)">
             <summary>
             Remove an entity
             </summary>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.unitOfWork.IEntityUnitOfWork">
+        <member name="T:mxcd.crossapp.unitOfWork.IEntityUnitOfWork">
             <summary>
             Pending entities
             </summary>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Add``1(``0)">
+        <member name="M:mxcd.crossapp.unitOfWork.IEntityUnitOfWork.Add``1(``0)">
             <summary>
             Add a new entity
             </summary>
             <typeparam name="T">Type</typeparam>
             <param name="obj">Entity</param>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Update``1(``0)">
+        <member name="M:mxcd.crossapp.unitOfWork.IEntityUnitOfWork.Update``1(``0)">
             <summary>
             Updates an entity
             </summary>
@@ -307,7 +307,7 @@
             <param name="obj">Entity</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Update``2(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},``1)">
+        <member name="M:mxcd.crossapp.unitOfWork.IEntityUnitOfWork.Update``2(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},``1)">
             <summary>
             Updates the entities in the database
             </summary>
@@ -315,7 +315,7 @@
             <typeparam name="P">Type</typeparam>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Remove``1(``0)">
+        <member name="M:mxcd.crossapp.unitOfWork.IEntityUnitOfWork.Remove``1(``0)">
             <summary>
             Removes an object
             </summary>
@@ -323,7 +323,7 @@
             <param name="obj">Entity</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.Remove``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+        <member name="M:mxcd.crossapp.unitOfWork.IEntityUnitOfWork.Remove``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
             <summary>
             Remove a set of objects
             </summary>
@@ -331,7 +331,7 @@
             <param name="filter"></param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.GetPendingEntities``1(mxcd.core.unitOfWork.enums.TypePending[])">
+        <member name="M:mxcd.crossapp.unitOfWork.IEntityUnitOfWork.GetPendingEntities``1(mxcd.crossapp.unitOfWork.enums.TypePending[])">
             <summary>
             Get pending objects
             </summary>
@@ -339,51 +339,51 @@
             <param name="types">Types to filter</param>
             <returns></returns>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IEntityUnitOfWork.GetPendingEntities(mxcd.core.unitOfWork.enums.TypePending[])">
+        <member name="M:mxcd.crossapp.unitOfWork.IEntityUnitOfWork.GetPendingEntities(mxcd.crossapp.unitOfWork.enums.TypePending[])">
             <summary>
             Get pending objects
             </summary>
             <param name="types">Types to filter</param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.unitOfWork.IUnitOfWork">
+        <member name="T:mxcd.crossapp.unitOfWork.IUnitOfWork">
             <summary>
             Unit of work
             </summary>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IUnitOfWork.SaveChanges">
+        <member name="M:mxcd.crossapp.unitOfWork.IUnitOfWork.SaveChanges">
             <summary>
             Save pending changes
             </summary>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IUnitOfWork.DiscardChanges">
+        <member name="M:mxcd.crossapp.unitOfWork.IUnitOfWork.DiscardChanges">
             <summary>
             Discard pending changes
             </summary>
         </member>
-        <member name="M:mxcd.core.unitOfWork.IUnitOfWork.AddPendingAction(System.Action)">
+        <member name="M:mxcd.crossapp.unitOfWork.IUnitOfWork.AddPendingAction(System.Action)">
             <summary>
             Add an action to execute before SaveChanges
             </summary>
             <param name="action"></param>
             <returns></returns>
         </member>
-        <member name="T:mxcd.core.unitOfWork.enums.TypePending">
+        <member name="T:mxcd.crossapp.unitOfWork.enums.TypePending">
             <summary>
             Action types, that will execute in order
             </summary>
         </member>
-        <member name="F:mxcd.core.unitOfWork.enums.TypePending.update">
+        <member name="F:mxcd.crossapp.unitOfWork.enums.TypePending.update">
             <summary>
             Update an item
             </summary>
         </member>
-        <member name="F:mxcd.core.unitOfWork.enums.TypePending.remove">
+        <member name="F:mxcd.crossapp.unitOfWork.enums.TypePending.remove">
             <summary>
             Removes an item
             </summary>
         </member>
-        <member name="F:mxcd.core.unitOfWork.enums.TypePending.add">
+        <member name="F:mxcd.crossapp.unitOfWork.enums.TypePending.add">
             <summary>
             Add new item
             </summary>

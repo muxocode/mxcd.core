@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace mxcd.core.unitOfWork
+namespace mxcd.crossapp.unitOfWork
 {
     /// <summary>
     /// Unit of work

@@ -1,4 +1,4 @@
-﻿using mxcd.core.rules;
+﻿using mxcd.crossapp.rules;
 using System;
 using System.Collections.Generic;
 using System.Text;

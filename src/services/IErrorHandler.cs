@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace mxcd.core.services
+namespace mxcd.crossapp.services
 {
     /// <summary>
     /// Error handler

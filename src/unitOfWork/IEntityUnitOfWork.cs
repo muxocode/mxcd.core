@@ -1,10 +1,10 @@
-﻿using mxcd.core.unitOfWork.enums;
+﻿using mxcd.crossapp.unitOfWork.enums;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace mxcd.core.unitOfWork
+namespace mxcd.crossapp.unitOfWork
 {
     /// <summary>
     /// Pending entities

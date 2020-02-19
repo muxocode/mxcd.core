@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mxcd.core.cqrs
+namespace mxcd.crossapp.cqrs
 {
     /// <summary>
     /// Querirer

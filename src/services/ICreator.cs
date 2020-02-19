@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace mxcd.core.services
+namespace mxcd.crossapp.services
 {
     /// <summary>
     /// Creates an entity of <typeparamref name="TOut"/> from <typeparamref name="TIn"/> value
