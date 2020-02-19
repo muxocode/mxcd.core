@@ -10,7 +10,7 @@
     <PackageProjectUrl>https://github.com/muxocode/mxcd.crossapp</PackageProjectUrl>
     <PackageIconUrl>https://muxocode.com/icon.png</PackageIconUrl>
     <Company>muxocode</Company>
-    <PackageTags>muxocode mxcd core interfaces</PackageTags>
+    <PackageTags>muxocode mxcd interfaces crossapp</PackageTags>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright></Copyright>
